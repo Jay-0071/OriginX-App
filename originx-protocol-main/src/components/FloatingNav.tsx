@@ -56,11 +56,11 @@ const FloatingNav = () => {
       transition={{ delay: 0.5, type: "spring", stiffness: 100 }}
       className="fixed top-0 left-0 right-0 z-50 w-full"
     >
-      <div className="bg-[rgba(10,20,15,0.35)] backdrop-blur-[10px] border border-[rgba(0,255,150,0.15)] px-6 py-2.5 grid grid-cols-3 items-center w-full">
+      <div className="bg-[rgba(10,20,15,0.35)] backdrop-blur-[10px] border border-[rgba(0,255,150,0.15)] px-4 md:px-6 py-2.5 flex flex-wrap md:grid md:grid-cols-3 items-center justify-between w-full">
 
         {/* Left: Logo */}
-        <div className="flex justify-start">
-          <Link to="/" className="flex items-center pl-2 gap-3 group">
+        <div className="flex justify-start w-auto">
+          <Link to="/" className="flex items-center md:pl-2 gap-3 group">
             <motion.div
               whileHover={{ rotate: 15, scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -76,7 +76,7 @@ const FloatingNav = () => {
         </div>
 
         {/* Center: Nav Items */}
-        <div className="flex items-center gap-1 justify-center w-max mx-auto overflow-x-auto no-scrollbar max-w-full">
+        <div className="flex items-center gap-1 justify-center w-full md:w-max mx-auto md:mx-auto overflow-x-auto no-scrollbar order-last md:order-none mt-3 md:mt-0">
           {filteredNavItems.map((item) => {
             const isActive = location.pathname === item.path;
             const Icon = item.icon;
@@ -106,7 +106,7 @@ const FloatingNav = () => {
         </div>
 
         {/* Right: CTA Button */}
-        <div className="flex justify-end pr-2 gap-2">
+        <div className="flex justify-end md:pr-2 gap-2 w-auto">
           {token ? (
             <div className="flex items-center gap-3">
               <span className="hidden md:block text-[10px] font-mono text-primary truncate max-w-[100px]">@{user?.handle}</span>

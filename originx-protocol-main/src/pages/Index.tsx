@@ -114,7 +114,7 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="font-display text-7xl md:text-[8rem] font-black mb-6 leading-none tracking-tight"
+              className="font-display text-6xl sm:text-7xl md:text-[8rem] font-black mb-6 leading-none tracking-tight"
             >
               <span className="text-foreground">ORIGIN</span>
               <span className="text-gradient-neon">X</span>
@@ -125,14 +125,14 @@ const Index = () => {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="h-[2px] w-64 mx-auto bg-gradient-to-r from-transparent via-primary/80 to-transparent mb-8"
+              className="h-[2px] w-48 sm:w-64 mx-auto bg-gradient-to-r from-transparent via-primary/80 to-transparent mb-8"
             />
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-2xl md:text-4xl font-body text-foreground/90 mb-5 font-medium tracking-wide"
+              className="text-xl sm:text-2xl md:text-4xl font-body text-foreground/90 mb-5 font-medium tracking-wide"
             >
               Protecting Media Authenticity & Data Dignity
             </motion.p>
